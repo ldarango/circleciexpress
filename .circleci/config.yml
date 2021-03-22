@@ -9,6 +9,8 @@ jobs:
       - checkout # check out the code in the project directory
       - run: npm install 
       - run: npm start & 
-      - run: npm test
-    node-tests:
+      - run: npm test   
+ workflows:
+  node-tests:
+    jobs:
       - node/test
