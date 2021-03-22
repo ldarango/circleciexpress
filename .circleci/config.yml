@@ -1,8 +1,4 @@
 version: 2.1
-workflows:
-  node-tests:
-    jobs:
-      - node/test
 jobs:
   build:
     docker: #  tircleci/node:10.0.0 # the primary container, where your job's commands are run
@@ -12,3 +8,4 @@ jobs:
       - run: npm install 
       - run: npm start & 
       - run: npm test   
+      - run: node/test
