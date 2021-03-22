@@ -11,3 +11,7 @@ jobs:
       - run: npm start & 
       - run: npm test   
       - run: node/test
+workflows:
+  node-tests:
+    jobs:
+      - node/test
