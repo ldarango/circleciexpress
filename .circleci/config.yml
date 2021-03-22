@@ -8,3 +8,12 @@ jobs:
       - run: npm install 
       - run: npm start & 
       - run: npm test
+commands:
+  sayhello:
+    description: "A very simple command for demonstration purposes"
+    parameters:
+      to:
+        type: string
+        default: "Hello World"
+    steps:
+      - run: echo << parameters.to >>
